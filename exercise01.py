@@ -2,11 +2,13 @@ from collections import Counter
 import re
 import cmath
 
+#Prints, how many pieces was published by each composer
 def printComposer(dictionary):
     for k, v in dictionary.items():
         if(k is not None):
             print('{}:{}'.format(k, v))
 
+#Prints how many pieces was published in a given century
 def printCentury(dictionary):
     for k, v in dictionary.items():
         if(k is not None):
@@ -19,9 +21,6 @@ def convertToInt(s):
         return century
     except (TypeError, ValueError):
         return None
-
-def modifyName(name):
-    pass
 
 authorCompositionCount = Counter()
 centuryCompositionCount = Counter()
@@ -49,6 +48,3 @@ centuryDict = dict(centuryCompositionCount)
 printComposer(authorDict)
 print()
 printCentury(centuryDict)
-
-
-
